@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Ubuntu+Mono&display=swap');
+    </style>
+
+    <script defer src="portfolio.js"></script>
+
+    <link id="css" rel="stylesheet" href="portfolio.css">
+
+    <title> Alex Baird | Web Dev Portfolio</title>
+
+</head>
+
+<body>
+    <!-- ////////////////////////////////////////////////////// NAVBAR \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <div id="top"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#top">HOME</a>
+                    <span class="nav-link disabled"> | </span>
+                    <a class="nav-link" href="#showcase" onclick="showSection(sectionIds[0])">PROJECT SHOWCASE</a>
+                    <span class="nav-link disabled"> | </span>
+                    <a class="nav-link" href="#info" onclick="showSection(sectionIds[1])">PROJECT INFO</a>
+                    <span class="nav-link disabled"> | </span>
+                    <a class="nav-link" href="#hobby" onclick="showSection(sectionIds[2])">HOBBY PROJECTS</a>
+                    <span class="nav-link disabled"> | </span>
+                    <a class="nav-link" href="CV.html" title="My CV on a separate webpage">CV</a>
+                    <span class="nav-link disabled"> | </span>
+                    <a class="nav-link" href="https://github.com/TaureHorn" title="My GitHub profile"
+                        target="_blank">GITHUB</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ////////////////////////////////////////////////////// HOMEPAGE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <div id="pagebox home" class="pagebox"> <!-- View height-->
+        <div id="homepage box" class="homepage-box">
+            <div id="centre content" class="centre-content">
+                <img class="headshot" src="resources/headshot.jpg" title="itsa me!"
+                    alt="greyscale bearded man in hat and sunglasses">
+                <div style="display:flex; padding-top: 5%; padding-bottom: 5%; align-items: center;">
+                    <div id="centre text box" class="centre-text">
+                        <h1>Hi, I'm Alex</h1>
+                        <span>I am a junior web developer with a specific interest in UI/UX design.
+                            Though have scientific background, achieving an MSc in Geoscience Research, I also have some
+                            self
+                            taught artistic talents too!</span>
+                        <hr>
+                        <a href="https://github.com/TaureHorn" title="My GitHub profile" target="_blank"> Github </a>
+                        <br>
+                        <a href="CV.html" title="My CV on a separate webpage"> CV </a>
+                    </div>
+                </div>
+            </div>
+            <div id="links box" class="links">
+                <a href="#showcase" style="text-decoration:none">
+                    <h1 class="link-text" onclick="showSection(sectionIds[0])"> PROJECTS SHOWCASE </h1>
+                </a>
+                <a href="#info" style="text-decoration:none">
+                    <h1 class="link-text"
+                        onclick="showSection(sectionIds[1]), toggleSubSections(infoSections[0], infoSections, infoSelector[0], infoSelector)">
+                         PROJECTS INFO </h1>
+                </a>
+                <a href="#hobby" style="text-decoration:none">
+                    <h1 class="link-text"
+                        onclick="showSection(sectionIds[2]), toggleSubSections(hobbySections[0], hobbySections, hobbySelector[0], hobbySelector)">
+                        HOBBY PROJECTS </h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////// PROJECT SHOWCASE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <div id="pagebox showcase" class="pagebox" style="display:none">
+        <div id="showcase">
+            <h1 style="margin-bottom:2%"> WEBDEV PROJECTS SHOWCASE </h1>
+            <div id="image container" class="showcase-flex-container">
+                <div id="showcase 1" class="showcase-image-container">
+                    <a href="#info" style="padding:0%"
+                        onclick="showSection(sectionIds[1]), toggleSubSections(infoSections[0], infoSections, infoSelector[0], infoSelector)">
+                        <img id="volcanoes site" class="showcase-img" src="resources/screenshot_1-volcanoes-site.jpg"
+                            title="site 1 | volcanoes" alt="screenshot of a website about volcanoes">
+                    </a>
+                </div>
+                <div id="showcase 2" class="showcase-image-container">
+                    <a href="#info" style="padding:0%"
+                        onclick="showSection(sectionIds[1]), toggleSubSections(infoSections[1], infoSections, infoSelector[1], infoSelector)">
+                        <img id="quiz site" class="showcase-img" src="resources/screenshot_2-quiz-site.jpg"
+                            title="site 2 | fantast bestiary quiz" alt="screen shot of an image quiz webstie">
+                    </a>
+                </div>
+                <div id="showcase 3" class="showcase-image-container">
+                    <a href="#info" style="padding:0%"
+                        onclick="showSection(sectionIds[1]), toggleSubSections(infoSections[2], infoSections, infoSelector[2], infoSelector)"">
+                        <img id=" hacking text game" class="showcase-img" src="resources/screenshot_3-game-site.jpg"
+                        title="site 3 | text based hacking game"
+                        alt="screenshot of a simple computer interface website">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- ////////////////////////////////////////////////////// PROJECT INFO \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <div id="pagebox info" class="pagebox" style="display: none;">
+        <div id="info">
+            <h1> WEBDEV PROJECTS INFO</h1>
+
+            <div class="info-panel">
+                <div id="info left panel" class="panel left-panel border">
+                    <div id="subheader container" style="display:flex; align-items: center">
+                        <h2> WEBDEV PROJECT</h2>
+                    </div>
+                    <hr>
+                    <p style="text-align: center;font-size: 12pt;"> Select a project</p>
+                    <div id="left panel text" class="left-panel-text-container">
+                        <h3 id="volcanoes select"
+                            onclick="toggleSubSections(infoSections[0], infoSections, infoSelector[0], infoSelector)">
+                            VOLCANOES</h3>
+                        <br>
+                        <h3 id="quiz select"
+                            onclick="toggleSubSections(infoSections[1], infoSections, infoSelector[1], infoSelector)">
+                            FANTASY BESTIARY
+                            QUIZ</h3>
+                        <br>
+                        <h3 id="hack select"
+                            onclick="toggleSubSections(infoSections[2], infoSections, infoSelector[2], infoSelector)">
+                            HACKING TEXT
+                            GAME</h3>
+                    </div>
+
+                </div>
+                <div id="info centre panel" class="panel centre-panel border">
+                    <div id="volcanoes info" style="display: none;">
+                        <div id="subtitle container" style="display:flex; align-items: center;">
+                            <h2> VOLCANOES</h2>
+                            <button
+                                onClick="javascript:window.open('https://taurehorn.github.io/hobbyWebsite', '_blank')">site</button>
+                            <button
+                                onClick="javascript:window.open('https://github.com/TaureHorn/hobbyWebsite', '_blank')">repo</button>
+                        </div>
+                        <hr>
+                        <div id="volcanoes text">
+                            Nordseewerke Emden GmbH (sometimes abbreviated NSWE, in English: North Sea Company) was a
+                            shipbuilding company, located in the Emden Harbor of the north German city of Emden. Founded
+                            in 1903, shipbuilding ended in 2010, and the company was taken over by the Schaaf Industrie
+                            AG,[1] which among other products, makes components for off-shore systems.
+
+                            The shipyard employed some 1,400 people in 2010 and was the second-largest employer in
+                            Emden, following the plant of the Volkswagen automotive company. Today only few of the
+                            former coworkers of the shipyard are still employed with the new owner Schaaf, which also
+                            went insolvent in 2012.[citation needed]
+                        </div>
+                    </div>
+                    <div id="quiz info" style="display: none;">
+                        <div id="subtitle container" style="display:flex; align-items: center;">
+                            <h2> FANTASY BESTIARY QUIZ</h2>
+                            <button
+                                onClick="javascript:window.open('https://taurehorn.github.io/fantasy-bestiary-quiz', '_blank')">site</button>
+                            <button
+                                onClick="javascript:window.open('https://github.com/TaureHorn/fantasy-bestiary-quiz', '_blank')">repo</button>
+                        </div>
+                        <hr>
+                        <div id="quiz text">
+                            Bridget Kearney (kə́ːnɪj, car'-nee) is an American musician and songwriter. She is a
+                            founding member of the band Lake Street Dive and winner of the 2005 John Lennon Songwriting
+                            Contest in the Jazz category.[1]
+
+                            Kearney's solo recording work began with her debut solo album, Won't Let You Down, released
+                            by Signature Sounds Recordings in 2017[2] followed by a number of singles released on
+                            YouTube, social media sites such as Instagram and available for personal music collections
+                            through most major channels.
+                        </div>
+                    </div>
+                    <div id="hacking game info" style="display: none;">
+                        <div id="subtitle container" style="display:flex; align-items: center;">
+                            <h2> HACKING TEXT GAME</h2>
+                            <button
+                                onClick="javascript:window.open('https://taurehorn.github.io/netrunner-adventure-game', '_blank')">site</button>
+                            <button
+                                onClick="javascript:window.open('https://github.com/TaureHorn/netrunner-adventure-game', '_blank')">repo</button>
+                        </div>
+                        <hr>
+                        <div id="hacking game text">
+                            Hans Grauert (8 February 1930 in Haren, Emsland, Germany – 4 September 2011) was a German
+                            mathematician. He is known for major works on several complex variables, complex
+                            manifolds[1] and the application of sheaf theory in this area, which influenced later work
+                            in algebraic geometry.[2] Together with Reinhold Remmert he established and developed the
+                            theory of complex-analytic spaces.[3] He became professor at the University of Göttingen in
+                            1958, as successor to C. L. Siegel. The lineage of this chair traces back through an eminent
+                            line of mathematicians: Weyl, Hilbert, Riemann, and ultimately to Gauss.[4] Until his death,
+                            he was professor emeritus at Göttingen.
+
+                            Grauert was awarded a fellowship of the Leopoldina.[5]
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ////////////////////////////////////////////////////// HOBBIES \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <div id="pagebox hobby" class="pagebox" style="display: none;">
+        <div id="hobby">
+            <h1> HOBBY PROJECTS</h1>
+            <div class="info-panel">
+                <div id="info left panel" class="panel left-panel border">
+                    <h2> HOBBY PROJECT</h2>
+                    <hr>
+                    <p style="text-align: center;font-size: 12pt;"> Select a project</p>
+                    <div id="left panel text" class="left-panel-text-container">
+                        <h3 id="dnd select"
+                            onclick="toggleSubSections(hobbySections[0], hobbySections, hobbySelector[0], hobbySelector)">
+                            DUNGEONS AND DRAGONS </h3>
+                        <br>
+                        <h3 id="linux select"
+                            onclick="toggleSubSections(hobbySections[1], hobbySections, hobbySelector[1], hobbySelector)">
+                            LEARNING LINUX </h3>
+                        <br>
+                        <h3 id="cycling select"
+                            onclick="toggleSubSections(hobbySections[2], hobbySections, hobbySelector[2], hobbySelector)">
+                            CYCLING </h3>
+                    </div>
+
+                </div>
+                <div id="info centre panel" class="panel centre-panel border">
+                    <div id="dnd hobby" style="display: none;">
+                        <div id="subtitle" style="display:flex; align-items: center;">
+                            <h2> DUNGEONS AND DRAGONS</h2>
+                        </div>
+                        <hr>
+                        <div id="dnd text">
+                            Laterna magika (Czech: Laterna magika), largely considered the world's first multimedia
+                            theatre, was founded as a cultural program at the 1958 Brussels Expo.[1] It launched its
+                            official activity on 9 May 1959, as an independent company of the National Theatre,
+                            performing at the Adria palace in Prague. Wonderful Circus, which premiered in 1977, is the
+                            most frequently performed theatre piece in Central Europe, and has remained in the
+                            repertoire ever since. Laterna magika now is one of the ensembles of the National Theatre,
+                            based at the New Stage of the National Theatre in Prague. Laterna magika productions blend
+                            various genres, ranging from dramatic acting through affording a dominant role to dance and
+                            ballet to mime and Black Theatre. All of their productions have been original works directly
+                            created for the company, not ready-made pieces, which, with a few exceptions, have never
+                            subsequently appeared in the repertoire of another company. The fundamental principle
+                            (interaction between film projection and live dramatic action) has been gradually
+                            supplemented with new technologies, for instance, digital projection or new media, including
+                            real-time programmable software. m illum at facilis, placeat quos minima corporis
+                            expedita cumque dolore atque eum!
+                            <div id="dnd images" class="img-tiles">
+                                <img class="info-image" src="resources/screenshot_4-DnD_stonemothers-cradle.jpg" title="The Stonemothers Cradle" alt="birds eye drawing of ruins overgrown by a tree">
+                                <img class="info-image" src="resources/screenshot_5-DnD_gulthias-dream.jpg" title="Gulthia's Dream" alt="birds eye drawing of an overgrown shrine">
+                                <img class="info-image" src="resources/screenshot_6-DnD_caedrow-temple.jpg" title="Temple of Melorshavyn" alt="birds eye drawing of a gothic temple">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="linux hobby" style="display: none;">
+                        <div id="subtitle" style="display:flex; align-items: center;">
+                            <h2> LEARNING LINUX</h2>
+                        </div>
+                        <hr>
+                        <div id="linux text">
+                            The Budd Metroliner was a class of American electric multiple unit (EMU) railcar designed
+                            for first-class, high-speed service between New York City and Washington, D.C. on the
+                            Northeast Corridor. They were designed for operation up to 150 miles per hour (240 km/h):
+                            what would have been the first high speed rail service in the Western Hemisphere. Although
+                            164 mph (264 km/h) was reached during test runs, track conditions and electrical issues
+                            limited top speeds to 120 mph (190 km/h) in revenue service. The single-ended units were
+                            designed to be arranged in two-car sets, which were in turn coupled into four to eight-car
+                            trains.
+
+                            The Pennsylvania Railroad (PRR) ordered 61 Metroliner cars from the Budd Company in 1966 as
+                            part of a collaboration with the federal government to improve railroad service between New
+                            York, Philadelphia, and Washington. After difficulties testing the cars, PRR successor Penn
+                            Central began its eponymous Metroliner service on January 16, 1969. Amtrak took over the
+                            service in 1971.
+                        </div>
+                    </div>
+                    <div id="cycling hobby" style="display: none;">
+                        <div id="subtitle" style="display:flex; align-items: center;">
+                            <h2> CYCLING</h2>
+                        </div>
+                        <hr>
+                        <div id="linux text">
+                            Walters House, also as known as the Walters Residence, is a historic home located in
+                            Morgantown, Monongalia County, West Virginia. It was built about 1900–1901, and is a brick
+                            Queen Anne style brick dwelling. It features a three-story tower in the southeast corner
+                            topped with a wrought-iron balustrade. The architect is unknown. It was a single family home
+                            until 1931, after which it was a boarding house, fraternity house, home of the University
+                            Christian Council, and law offices.[2] It is currently the location of the Morgantown Chabad
+                            Jewish Center. It was listed on the National Register of Historic Places in 1983. It is
+                            located in the Downtown Morgantown Historic District, listed in 1996.[1]
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
