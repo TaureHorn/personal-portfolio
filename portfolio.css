@@ -18,7 +18,7 @@ body {
 nav {
     width: 100% !important;
     position: fixed !important;
-    bottom: 0px !important;    
+    bottom: 0px !important;
     height: 5% !important;
 }
 
@@ -30,7 +30,7 @@ nav {
 }
 
 .nav-link:hover {
-    color:white !important;
+    color: white !important;
 }
 
 
@@ -38,7 +38,6 @@ nav {
     border: 2px solid rgba(255, 255, 255, .5) !important;
     border-radius: 0.5em;
     margin: 1%
-
 }
 
 .pagebox {
@@ -64,13 +63,14 @@ button:hover {
     border-color: white;
     background: rgba(255, 255, 255, .5);
 }
- 
+
 button:active {
     border-color: white;
     background-color: rgba(255, 255, 255, .75);
 }
 
-a:hover, h3:hover {
+a:hover,
+h3:hover {
     background-color: rgba(255, 255, 255, .25);
     border-radius: 0.5em;
 }
@@ -112,7 +112,7 @@ button {
 }
 
 hr {
-    border: 2px solid white;
+    border: 1px solid white;
     margin-bottom: 2%;
 }
 
@@ -154,7 +154,7 @@ hr {
 }
 
 .link-text:hover {
-    color:white;
+    color: white;
 
 }
 
@@ -226,7 +226,7 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
 }
 
 .centre-panel {
@@ -235,24 +235,57 @@ hr {
     text-align: left;
 }
 
+.subtitle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-small {
+    max-width: 10%;
+
+    transition: all .25s ease;
+}
+
+.img-small:hover {
+    transform: scale(7);
+    filter: brightness(175%);
+}
+
+
 /* /////////////////////////////////// HOBBY CONTAINERS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 .img-tiles {
     display: flex;
-    justify-content: space-around;
-    margin: 2%;
+    justify-content: center;
+    align-self: flex-end;
+    /* margin: 2%; */
 }
 
 .info-image {
-    width: 30%;
+    max-width: 20%;
     border-radius: 0.5em;
     border: 2px solid gray;
+    margin: 1%;
 
     transition: all .25s ease;
 }
 
 .info-image:hover {
-    transform: scale(1.4);
+    transform: scale(2);
     filter: brightness(150%);
 }
 
+p[id*="info-text"],
+li[id*="info-text"],
+a[id*="info-text"] {
+    text-align: justify;
+    font-size: 14pt;
+}
+
+p[id*="hobby-text"],
+li[id*="hobby-text"],
+a[id*="hobby-text"] {
+    text-align: justify;
+    font-size: 12pt;
+}
